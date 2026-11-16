@@ -3,7 +3,7 @@
 > One networking project a day — configurations, automation scripts, and lab guides
 > documenting my path from **CCNA** to **CCNP Enterprise**.
 
-![Projects](https://img.shields.io/badge/projects-0-blue)
+![Projects](https://img.shields.io/badge/projects-2-blue)
 ![Track](https://img.shields.io/badge/track-CCNA%20%E2%86%92%20CCNP-0a7cbf)
 ![Started](https://img.shields.io/badge/started-2026--11--16-lightgrey)
 
@@ -21,9 +21,11 @@ Each folder is a self-contained lab with:
 
 ## 🧭 Table of Contents
 
+<!-- Add new projects as rows at the bottom of this table (no blank lines inside it) -->
 | #   | Date       | Project | Track | Topics | Tools |
 |-----|------------|---------|-------|--------|-------|
-<!-- NEW PROJECTS GO BELOW THIS LINE — newest at the bottom -->
+| 001 | 2026-11-16 | [VLANs, 802.1Q Trunking & Router-on-a-Stick](001-vlan-trunking-router-on-a-stick/) | CCNA | VLANs, 802.1Q, native VLAN, inter-VLAN routing, SSH | Packet Tracer |
+| 002 | 2026-11-16 | [IPv4/IPv6 Subnetting + Python Subnet Calculator](002-ipv4-ipv6-subnetting/) | CCNA | VLSM, IPv6 /64 planning, EUI-64 | Python |
 
 ## 📈 Progress by Exam Domain
 
@@ -31,10 +33,10 @@ Each folder is a self-contained lab with:
 
 | Domain | Weight | Projects |
 |--------|--------|----------|
-| 1.0 Network Fundamentals | 20% | — |
-| 2.0 Network Access (VLANs, STP, EtherChannel, Wireless) | 20% | — |
+| 1.0 Network Fundamentals | 20% | [002](002-ipv4-ipv6-subnetting/) |
+| 2.0 Network Access (VLANs, STP, EtherChannel, Wireless) | 20% | [001](001-vlan-trunking-router-on-a-stick/) |
 | 3.0 IP Connectivity (Static, OSPF, FHRP) | 25% | — |
-| 4.0 IP Services (NAT, DHCP, NTP, SNMP, QoS) | 10% | — |
+| 4.0 IP Services (NAT, DHCP, NTP, SNMP, QoS, SSH) | 10% | [001](001-vlan-trunking-router-on-a-stick/) |
 | 5.0 Security Fundamentals (ACLs, Port Security, AAA) | 15% | — |
 | 6.0 Automation & Programmability | 10% | — |
 
