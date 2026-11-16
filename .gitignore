@@ -1,0 +1,181 @@
+# =====================================================================
+#  .gitignore — CCNA / CCNP Daily Projects
+#  Goal: never commit credentials, device backups with secrets,
+#        captures with real traffic, or bulky simulator/VM files.
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# 1. Secrets & credentials  (MOST IMPORTANT)
+# ---------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env
+secrets.*
+!secrets.example.*
+credentials.*
+!credentials.example.*
+*credentials*.json
+*credentials*.yml
+*credentials*.yaml
+vault_pass*
+.vault_pass*
+*.vault
+inventory/*_secrets.yml
+group_vars/**/vault.yml
+host_vars/**/vault.yml
+
+# Keys & certificates
+*.pem
+*.key
+*.ppk
+*.p12
+*.pfx
+*.crt
+*.cer
+*.csr
+*.jks
+id_rsa*
+id_ed25519*
+id_ecdsa*
+known_hosts
+
+# VPN / remote-access profiles (often embed keys or passwords)
+*.ovpn
+*.pcf
+*.anyconnect
+wg*.conf
+
+# ---------------------------------------------------------------------
+# 2. Raw device output (may contain real secrets / real IPs)
+#    -> Commit only the SANITIZED copy (e.g. R1-sanitized.cfg)
+# ---------------------------------------------------------------------
+*.raw.cfg
+*.raw.txt
+*-raw.*
+*_raw.*
+running-config-backup*
+startup-config-backup*
+backups/
+config_backups/
+tftp-root/
+*.bak
+
+# Packet captures (real traffic, credentials in clear-text protocols)
+# -> Commit a capture only if it's from an isolated lab; rename to *.lab.pcap
+*.pcap
+*.pcapng
+*.cap
+!*.lab.pcap
+!*.lab.pcapng
+
+# Session logs from PuTTY / SecureCRT / MobaXterm
+*.log
+putty*.log
+session*.log
+logs/
+
+# ---------------------------------------------------------------------
+# 3. Lab simulators & emulators (large binaries, licensed images)
+# ---------------------------------------------------------------------
+# Cisco IOS / IOU / IOL / NX-OS / ASA images — never commit (licensing)
+*.bin
+*.image
+*.iol
+*.qcow2
+*.vmdk
+*.vdi
+*.ova
+*.ovf
+*.iso
+*.img
+
+# GNS3
+*.gns3.backup
+project-files/
+*.gns3project
+
+# EVE-NG exports are fine to commit (small .unl/.zip) — temp files are not
+*.unl.lock
+
+# Packet Tracer: .pkt files ARE committed (they're your lab). Ignore autosaves.
+*.pkt.bak
+*.pka.bak
+*.autosave
+
+# CML (Cisco Modeling Labs) — topology YAML is fine, local state is not
+.virl/
+.cml/
+
+# Containerlab runtime directories
+clab-*/
+.clab*/
+
+# Vagrant / VirtualBox
+.vagrant/
+
+# ---------------------------------------------------------------------
+# 4. Python automation (Netmiko, NAPALM, Nornir, Paramiko, pyATS)
+# ---------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+nornir.log
+# pyATS / Genie run artifacts
+archive/
+runinfo/
+*.report
+
+# ---------------------------------------------------------------------
+# 5. Ansible
+# ---------------------------------------------------------------------
+*.retry
+.ansible/
+ansible.log
+fact_cache/
+
+# ---------------------------------------------------------------------
+# 6. Terraform (if you do cloud networking labs)
+# ---------------------------------------------------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+
+# ---------------------------------------------------------------------
+# 7. Local tool settings (kept on this machine only)
+# ---------------------------------------------------------------------
+CLAUDE.md
+.claude/
+
+# ---------------------------------------------------------------------
+# 8. OS & editor noise
+# ---------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+*.lnk
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+~$*
+*.tmp
