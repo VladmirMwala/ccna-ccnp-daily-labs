@@ -71,6 +71,7 @@ graph TD
 
 | File | Description |
 |------|-------------|
+| [`LAB-GUIDE.md`](LAB-GUIDE.md) | **Start here.** Click-by-click Packet Tracer build with checkpoints after every step |
 | [`configs/R1.cfg`](configs/R1.cfg) | Router-on-a-stick subinterfaces, SSH, hardening |
 | [`configs/SW1.cfg`](configs/SW1.cfg) | VLANs, two trunks, access ports, MGMT SVI |
 | [`configs/SW2.cfg`](configs/SW2.cfg) | VLANs, trunk to SW1, access ports, MGMT SVI |

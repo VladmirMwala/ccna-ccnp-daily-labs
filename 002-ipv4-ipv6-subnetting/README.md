@@ -44,6 +44,7 @@ The full plan, with tables, method and practice problems, is in **[`addressing-p
 
 | File | Description |
 |------|-------------|
+| [`LAB-GUIDE.md`](LAB-GUIDE.md) | **Start here.** Step-by-step: subnetting by hand, VLSM, IPv6, running the tool, code explained, 4 challenges |
 | [`addressing-plan.md`](addressing-plan.md) | Requirements, VLSM worksheet, IPv6 plan, 8 practice problems with answers |
 | [`scripts/subnet_calc.py`](scripts/subnet_calc.py) | CLI subnet calculator (IPv4 + IPv6) |
 | [`scripts/test_subnet_calc.py`](scripts/test_subnet_calc.py) | 22 unit tests, including one that checks the plan's VLSM table |
